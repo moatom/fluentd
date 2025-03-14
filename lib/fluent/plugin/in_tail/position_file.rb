@@ -24,7 +24,7 @@ module Fluent::Plugin
 
       def self.load(file, follow_inodes, existing_targets, logger:)
         pf = new(file, follow_inodes, logger: logger)
-        pf.load(existing_targets)
+        pf.load(existing_targets) # XXX
         pf
       end
 
@@ -148,7 +148,7 @@ module Fluent::Plugin
         end
       end
 
-      def fetch_compacted_entries
+      def fetch_compacted_entries # XXX
         entries = {}
 
         @file.pos = 0

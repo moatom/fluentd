@@ -157,6 +157,7 @@ module Fluent
         @root_agent_mutex.synchronize do
           start
         end
+        $log.warn "after start"
 
         @fluent_log_event_router.start
 
